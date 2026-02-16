@@ -1,14 +1,20 @@
-​1. Analisis Materi: Array vs List. 
-​Bayangkan Anda memiliki kotak penyimpanan:
-​Array (Lemari Besi): Ukurannya tetap (misal: hanya 5 laci). Anda tidak bisa menambah laci baru di tengah jalan. Sangat hemat tempat dan cepat jika Anda hanya perlu mengambil barang dari laci tertentu.  
-​List (Tas Belanja): Ukurannya fleksibel. Bisa membesar atau mengecil secara otomatis. Namun, ia memakan lebih banyak tempat di memori karena selalu menyiapkan ruang kosong ekstra untuk berjaga-jaga. 
- 
-Ringkasan Aturan The Game of Life. 
-​Ini adalah simulasi sel hidup/mati pada papan kotak-kotak dengan 4 aturan utama:  
-​Tetap Hidup: Sel hidup dengan 2 atau 3 tetangga tetap hidup.  
-​Kesepian: Sel hidup dengan < 2 tetangga akan mati.  
-​Kepadatan: Sel hidup dengan > 3 tetangga akan mati.  
-​Kelahiran: Sel mati dengan tepat 3 tetangga akan jadi hidup.  
+​1. Analisis File: Array vs. List dan Game of Life
+​Terdapat tiga poin utama yang dibahas:
 
-​2. Implementasi Kode Sederhana
-​Karena Python secara bawaan tidak memiliki array murni seperti di bahasa C++, kita sering menggunakan List. Namun, kita akan mensimulasikan logika "Array" (ukuran tetap).
+​A. Perbedaan Array dan List (Python)
+​Meskipun terlihat mirip, keduanya memiliki karakteristik berbeda:
+• ​Array: Ukurannya tetap (fixed). Lebih efisien dalam penggunaan memori karena tidak ada ruang ekstra yang terbuang. Cocok jika jumlah data sudah diketahui sejak awal.  
+• ​List: Ukurannya dinamis (bisa bertambah/berkurang). Lebih fleksibel dengan banyak operasi seperti menambah dan menghapus elemen, namun memakan lebih banyak memori.  
+
+B. Struktur Data ADT Array
+​Karena Python tidak memiliki array primitif seperti bahasa lain (C++ atau Java), kita mendefinisikan Abstract Data Type (ADT) Array. Operasi dasarnya meliputi:  
+• ​Array(size): Membuat tempat penyimpanan.  
+• ​getitem(index) & setitem(index, value): Membaca dan mengisi data.  
+• ​length(): Mengetahui kapasitas total.  
+
+​C. Game of Life
+​Ini adalah simulasi sel yang hidup atau mati berdasarkan jumlah tetangganya (8 sel di sekitarnya).  
+•​ Tetangga < 2: Mati (kesepian).  
+• ​Tetangga 2 atau 3: Tetap hidup.  
+• ​Tetangga > 3: Mati (overpopulasi).  
+• ​Tetangga pas 3 (pada sel mati): Jadi hidup (kelahiran).
